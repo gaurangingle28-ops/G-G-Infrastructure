@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G&G INFRASTRUCTURE</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background: rgba(0,0,0,0.85);
+      padding: 20px 40px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 2.7em;
+      color: #ffd700;
+      letter-spacing: 2px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ffd700; }
+    section { padding: 60px 20px; text-align: center; }
+    section h2 {
+      font-size: 2.2em;
+      margin-bottom: 25px;
+      color: #ffd700;
+      text-transform: uppercase;
+    }
+    .about p {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #f0f0f0;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 15px 0 10px;
+      color: #ffe066;
+    }
+    .card p {
+      padding: 0 15px 20px;
+      font-size: 1em;
+    }
+    footer {
+      padding: 25px;
+      text-align: center;
+      background: rgba(0,0,0,0.85);
+      color: #ffd700;
+      margin-top: 40px;
+    }
+    a { color: #ffd700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>G&G INFRASTRUCTURE</h1>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#projects">Our Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      G&G INFRASTRUCTURE is a leading construction company specializing in industrial and commercial infrastructure.
+      With years of experience in building warehouses, fabrication units, and renewable energy facilities, we provide 
+      innovative and reliable construction solutions tailored to our clients’ needs. Our commitment to quality, safety, 
+      and efficiency makes us a trusted partner for projects across Chakan and Pune region.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects">
+
+      <!-- Wikov Indigear Project -->
+      <div class="card">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqy1qVR_Y2pV_cwBB3XFRy_YHgZHxcvfG41_haIOvdh6jYqW5b4yNIINwOWH_RG-kEpfY1TqRnVk9sCenEbIdNQ_GVFPvSTo2y_ZMZIptaZF0rYnvI2uU1abTeSmLqC_sSB2v1b_g=w1080-h720" 
+             alt="Wikov Indigear Warehouse - Chakan">
+        <h3>WIKOV INDIGEAR – VASULI, CHAKAN</h3>
+        <p>A state-of-the-art warehouse facility built for Wikov Indigear in Vasuli, Chakan, showcasing our industrial construction expertise.</p>
+      </div>
+
+      <!-- Beninger Project -->
+      <div class="card">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npx7A4rLnlafQ_nWjxK5RL3M5O1d3CwDJjQrUBtBM9NnM2uq7vHGPvJmg6BsXjk_-lsoOPb2uyzvk-utHzA65SOMsnv1kUPbR6z9j1VvjP6E84qlglg-_Saf1-BoNwte_whIVWK=w1080-h720" 
+             alt="Beninger Warehouse - Chakan">
+        <h3>BENINGER – CHAKAN</h3>
+        <p>A modern warehouse constructed for Beninger in Chakan, designed with advanced infrastructure and maximum efficiency.</p>
+      </div>
+
+      <!-- Tusar Fabengineers Project -->
+      <div class="card">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npdwrrovSC56W2zccjpJnCu0lUjV-NBdeRNPmrAAYTgeBHfSNah4khH0R3bGmumehks_sHRmAMDQrpFe7zZs7m488pabjnq04cgUGQstFVsMk4fDGXV40qKqhWnQhVue3pSBCS6cg=w1080-h720" 
+             alt="Tusar Fabengineers Warehouse - Chakan">
+        <h3>TUSAR FABENGINEERS – CHAKAN</h3>
+        <p>A specialized fabrication facility in Chakan, focusing on heavy industrial equipment and precision engineering for global clients.</p>
+      </div>
+
+      <!-- Amperehour Solar Technologies Project -->
+      <div class="card">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noUqk7FnXis6igrG-rScBljD8Z58hljGzLIx9Iagix4K8nJ5VjBwen-B4Wx_VQb-UMZKwECXAXbNKRI1M-paTBzceIDHlWi-29YAcZbuefnTIh4Y3LSkHlomUqLrqqewj8X_zuN=w1080-h720" 
+             alt="Amperehour Solar Technologies - Chakan">
+        <h3>AMPEREHOUR SOLAR TECHNOLOGIES – CHAKAN</h3>
+        <p>A renewable energy facility specializing in solar technology solutions, demonstrating sustainable industrial construction in Chakan.</p>
+      </div>
+
+      <!-- Talegaonkar Profiles Project -->
+      <div class="card">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nptYUvZjGkykIPfXwneDbJfm-SgFzI4z6FjC3Y87PjnGmxBBxmJKX9PxpTUKraZOIL9tueWnO-cWLuZqsM2nVK-X8NmSNQlEXt7fWOI3a6Irdpy2LXm7zpEuD3e62ovm9Tntf5mZHGwyDNO=w1080-h720" 
+             alt="Talegaonkar Profiles - Chakan">
+        <h3>TALEGAONKAR PROFILES – CHAKAN</h3>
+        <p>An industrial profiles manufacturing facility in Chakan, showcasing modern infrastructure and efficient industrial design.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@gginfrastructure.com">info@gginfrastructure.com</a></p>
+    <p>Phone: +91 9822798414</p>
+    <p>Location: Chakan</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 G&G INFRASTRUCTURE | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
