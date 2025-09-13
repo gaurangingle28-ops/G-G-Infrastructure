@@ -87,6 +87,38 @@
     }
     a { color: #ffd700; text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    /* Enquiry Section Styles */
+    #enquiry p {
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      font-size: 1.1em;
+      color: #f0f0f0;
+    }
+    #enquiry form input,
+    #enquiry form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-size: 1em;
+    }
+    #enquiry form button {
+      background: #ffd700;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #enquiry form button:hover {
+      background: #e6c200;
+    }
   </style>
 </head>
 <body>
@@ -97,6 +129,7 @@
       <a href="#about">About Us</a>
       <a href="#projects">Our Projects</a>
       <a href="#contact">Contact</a>
+      <a href="#enquiry">Enquiry</a>
     </nav>
   </header>
 
@@ -165,6 +198,28 @@
     <p>Email: <a href="mailto:duingle17@gmail.com">duingle17@gmail.com</a></p>
     <p>Phone: +91 9822798414</p>
     <p>Location: Chakan</p>
+  </section>
+
+  <!-- Enquiry Section -->
+  <section id="enquiry">
+    <h2>Enquiry</h2>
+    <p>Have a project in mind? Send us your details and our team will get back to you promptly.</p>
+    <form action="mailto:duingle17@gmail.com" method="post" enctype="text/plain" style="max-width:600px; margin: 20px auto; text-align:left;">
+      
+      <label for="name" style="display:block; margin-bottom:5px; font-weight:bold;">Name:</label>
+      <input type="text" id="name" name="Name" required>
+      
+      <label for="email" style="display:block; margin-bottom:5px; font-weight:bold;">Email:</label>
+      <input type="email" id="email" name="Email" required>
+      
+      <label for="phone" style="display:block; margin-bottom:5px; font-weight:bold;">Phone:</label>
+      <input type="tel" id="phone" name="Phone" required>
+      
+      <label for="message" style="display:block; margin-bottom:5px; font-weight:bold;">Message / Project Details:</label>
+      <textarea id="message" name="Message" rows="5" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
   <!-- Footer -->
