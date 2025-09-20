@@ -8,7 +8,7 @@
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     html {
-      scroll-padding-top: 115px; /* adjust to your header’s height */
+      scroll-padding-top: 115px;
     }
     body {
       font-family: "Segoe UI", Arial, sans-serif;
@@ -16,7 +16,7 @@
       color: #f5f5f5;
       line-height: 1.6;
     }
-    
+
     /* Header */
     header {
       display: flex;
@@ -90,6 +90,7 @@
       width: 100%;
       height: 200px;
       object-fit: cover;
+      cursor: pointer;
     }
     .card h3 {
       margin: 15px 0 10px;
@@ -153,6 +154,33 @@
     a { color: #ffd700; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* Lightbox */
+    #lightbox-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    #lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #fff;
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #ffd700;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 <body>
@@ -193,7 +221,7 @@
       <!-- Wikov Indigear -->
       <div class="card">
         <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqy1qVR_Y2pV_cwBB3XFRy_YHgZHxcvfG41_haIOvdh6jYqW5b4yNIINwOWH_RG-kEpfY1TqRnVk9sCenEbIdNQ_GVFPvSTo2y_ZMZIptaZF0rYnvI2uU1abTeSmLqC_sSB2v1b_g=w1080-h720" 
-             alt="Wikov Indigear Warehouse - Chakan">
+             alt="Wikov Indigear Warehouse - Chakan" class="lightbox-image">
         <h3>WIKOV INDIGEAR – Wasuli, Chakan</h3>
         <p>A state-of-the-art warehouse facility built for Wikov Indigear in Vasuli, Chakan, showcasing our industrial construction expertise.</p>
       </div>
@@ -201,7 +229,7 @@
       <!-- Beninger -->
       <div class="card">
         <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npx7A4rLnlafQ_nWjxK5RL3M5O1d3CwDJjQrUBtBM9NnM2uq7vHGPvJmg6BsXjk_-lsoOPb2uyzvk-utHzA65SOMsnv1kUPbR6z9j1VvjP6E84qlglg-_Saf1-BoNwte_whIVWK=w1080-h720" 
-             alt="Beninger Warehouse - Chakan">
+             alt="Beninger Warehouse - Chakan" class="lightbox-image">
         <h3>BENINGER – Nighoje, Chakan</h3>
         <p>A modern warehouse constructed for Beninger in Chakan, designed with advanced infrastructure and maximum efficiency.</p>
       </div>
@@ -209,7 +237,7 @@
       <!-- Tusar Fabengineers -->
       <div class="card">
         <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npdwrrovSC56W2zccjpJnCu0lUjV-NBdeRNPmrAAYTgeBHfSNah4khH0R3bGmumehks_sHRmAMDQrpFe7zZs7m488pabjnq04cgUGQstFVsMk4fDGXV40qKqhWnQhVue3pSBCS6cg=w1080-h720" 
-             alt="Tusar Fabengineers Warehouse - Chakan">
+             alt="Tusar Fabengineers Warehouse - Chakan" class="lightbox-image">
         <h3>TUSAR FABENGINEERS – HP Chowk, Chakan</h3>
         <p>A specialized fabrication facility in Chakan, focusing on heavy industrial equipment and precision engineering for global clients.</p>
       </div>
@@ -217,20 +245,20 @@
       <!-- Amperehour Solar -->
       <div class="card">
         <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noUqk7FnXis6igrG-rScBljD8Z58hljGzLIx9Iagix4K8nJ5VjBwen-B4Wx_VQb-UMZKwECXAXbNKRI1M-paTBzceIDHlWi-29YAcZbuefnTIh4Y3LSkHlomUqLrqqewj8X_zuN=w1080-h720" 
-             alt="Amperehour Solar Technologies - Chakan">
+             alt="Amperehour Solar Technologies - Chakan" class="lightbox-image">
         <h3>AMPEREHOUR SOLAR TECHNOLOGIES – Wasuli, Chakan</h3>
         <p>A renewable energy facility specializing in solar technology solutions, demonstrating sustainable industrial construction in Chakan.</p>
       </div>
-      
- <!-- Talegaonkar Profiles -->
- <div class="card">
-  <img src="Talegaonkar/Talegaonkar.jpeg" 
-       alt="Talegaonkar Profiles Pvt. Ltd - Chakan" 
-       class="lightbox-image"
-       style="height:200px; object-fit:cover;">
-  <h3>TALEGAONKAR PROFILES PVT. LTD – Wasuli, Chakan</h3>
-  <p>An industrial profiles manufacturing facility in Chakan, showcasing modern infrastructure and efficient industrial design.</p>
-</div>
+
+      <!-- Talegaonkar Profiles -->
+      <div class="card">
+        <img src="Talegaonkar/Talegaonkar.jpeg" 
+             alt="Talegaonkar Profiles Pvt. Ltd - Chakan" class="lightbox-image">
+        <h3>TALEGAONKAR PROFILES PVT. LTD – Wasuli, Chakan</h3>
+        <p>An industrial profiles manufacturing facility in Chakan, showcasing modern infrastructure and efficient industrial design.</p>
+      </div>
+
+    </div>
   </section>
 
   <!-- Founder -->
@@ -279,27 +307,37 @@
     <p>&copy; 2025 G&G INFRASTRUCTURE | All Rights Reserved</p>
   </footer>
 
+  <!-- Lightbox Overlay -->
+  <div id="lightbox-overlay">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Full Image">
+  </div>
+
+  <!-- Lightbox Script -->
+  <script>
+    const lightboxImages = document.querySelectorAll('.lightbox-image');
+    const lightboxOverlay = document.getElementById('lightbox-overlay');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    lightboxImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxOverlay.style.display = 'flex';
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightboxOverlay.style.display = 'none';
+    });
+
+    lightboxOverlay.addEventListener('click', e => {
+      if(e.target === lightboxOverlay) lightboxOverlay.style.display = 'none';
+    });
+  </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
