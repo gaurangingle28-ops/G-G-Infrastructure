@@ -1,83 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G&G INFRASTRUCTURE</title>
-<meta name="google-site-verification" content="3SlyCK9cYWTNML4fzZPS4IvoJDXd1Ij62qc3yCG3i80" />
-<style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-padding-top: 115px; }
-  body { font-family: "Segoe UI", Arial, sans-serif; background: linear-gradient(135deg, #1f1c2c, #928dab); color: #f5f5f5; line-height: 1.6; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G&G INFRASTRUCTURE</title>
+  <meta name="google-site-verification" content="3SlyCK9cYWTNML4fzZPS4IvoJDXd1Ij62qc3yCG3i80" />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-padding-top: 115px; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
 
-  /* Header */
-  header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 15px 40px; background: rgba(0,0,0,0.85); position: sticky; top: 0; z-index: 1000; flex-wrap: wrap;
-  }
-  .logo-title { display: flex; align-items: center; gap: 15px; }
-  .logo-title img { height: 85px; width: 165px; }
-  .logo-title h1 { font-size: 2.5em; color: #ffd700; letter-spacing: 2px; }
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: rgba(0,0,0,0.85);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo-title img { height: 85px; width: 165px; }
+    .logo-title h1 { font-size: 2.5em; color: #ffd700; letter-spacing: 2px; }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ffd700; }
 
-  nav { display: flex; align-items: center; gap: 15px; }
-  nav a { text-decoration: none; color: #fff; font-weight: bold; transition: color 0.3s; }
-  nav a:hover { color: #ffd700; }
+    /* Hamburger */
+    #hamburger {
+      display: none;
+      font-size: 30px;
+      color: #ffd700;
+      cursor: pointer;
+    }
 
-  /* Hamburger for mobile */
-  .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
-  .hamburger div { width: 30px; height: 3px; background: #fff; }
+    /* Section */
+    section { padding: 60px 20px; text-align: center; }
+    section h2 {
+      font-size: 2.2em;
+      margin-bottom: 25px;
+      color: #ffd700;
+      text-transform: uppercase;
+    }
+    .about p { max-width: 900px; margin: 0 auto; font-size: 1.1em; line-height: 1.8; color: #f0f0f0; }
+    .parent-company { display: block; margin-top: 10px; font-size: 1.5em; font-weight: bold; color: #ffd700; text-align: center; }
 
-  /* Sections */
-  section { padding: 60px 20px; text-align: center; }
-  section h2 { font-size: 2.2em; margin-bottom: 25px; color: #ffd700; text-transform: uppercase; }
-  .about p { max-width: 900px; margin: 0 auto; font-size: 1.1em; line-height: 1.8; color: #f0f0f0; }
-  .parent-company { display: block; margin-top: 10px; font-size: 1.5em; font-weight: bold; color: #ffd700; text-align: center; }
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px; }
+    .card {
+      background: rgba(255,255,255,0.15);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.25); }
+    .card img { width: 100%; height: 200px; object-fit: cover; cursor: pointer; }
+    .card h3 { margin: 15px 0 10px; color: #ffd700; }
+    .card p { padding: 0 15px 20px; font-size: 1em; color: #f0f0f0; }
 
-  /* Projects */
-  .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
-  .card { background: rgba(255,255,255,0.15); border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.6); transition: transform 0.3s ease, background 0.3s ease; display: flex; flex-direction: column; }
-  .card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.25); }
-  .card img { width: 100%; height: 200px; object-fit: cover; cursor: pointer; }
-  .card h3 { margin: 15px 0 10px; color: #ffd700; font-size: 1.1em; }
-  .card p { padding: 0 15px 20px; font-size: 1em; color: #f0f0f0; }
+    /* Founder */
+    #founder h2 { font-size: 36px; color: #ffd700; margin-bottom: 20px; }
+    #founder h3 { font-size: 28px; color: #f0f0f0; margin-bottom: 10px; }
+    #founder p { font-size: 18px; color: #dcdcdc; line-height: 1.6; margin-bottom: 20px; }
+    #founder p.italic { font-size: 26px; color: #ffd700; font-style: italic; }
 
-  /* Founder */
-  #founder h2 { font-size: 36px; color: #ffd700; margin-bottom: 20px; }
-  #founder h3 { font-size: 28px; color: #f0f0f0; margin-bottom: 10px; }
-  #founder p { font-size: 18px; color: #dcdcdc; line-height: 1.6; margin-bottom: 20px; }
-  #founder p.italic { font-size: 26px; color: #ffd700; font-style: italic; }
+    /* Contact */
+    #contact { padding: 50px 20px; text-align: center; }
+    #contact .contact-container { display: flex; flex-direction: column; align-items: center; gap: 10px; }
 
-  /* Contact */
-  #contact { text-align: center; }
-  #contact p { font-size: 1.1em; margin-bottom: 10px; color: #f0f0f0; }
+    /* Enquiry */
+    #enquiry { padding: 50px 20px; text-align: center; }
+    #enquiry p { max-width: 700px; margin: 0 auto 30px auto; font-size: 1.1em; color: #f0f0f0; }
+    #enquiry form {
+      max-width: 500px;
+      margin: 20px auto;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #enquiry input, #enquiry textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: #2c2a36;
+      color: #fff;
+      font-size: 1em;
+    }
+    #enquiry button {
+      padding: 12px 25px;
+      background: #ffd700;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #enquiry button:hover { background: #e6c200; }
 
-  /* Enquiry */
-  #enquiry p { max-width: 700px; margin: 0 auto 30px auto; font-size: 1.1em; color: #f0f0f0; }
-  #enquiry form { max-width: 600px; margin: 20px auto; text-align: left; }
-  #enquiry form label { display: block; margin-bottom: 5px; font-weight: bold; }
-  #enquiry form input, #enquiry form textarea {
-    width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #fff; font-size: 1em;
-  }
-  #enquiry form button {
-    background: #ffd700; color: #000; font-weight: bold; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s;
-  }
-  #enquiry form button:hover { background: #e6c200; }
+    /* Footer */
+    footer { padding: 25px; text-align: center; background: rgba(0,0,0,0.85); color: #ffd700; margin-top: 40px; }
+    a { color: #fff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-  /* Footer */
-  footer { padding: 25px; text-align: center; background: rgba(0,0,0,0.85); color: #ffd700; margin-top: 40px; }
+    /* Lightbox */
+    #lightbox-overlay {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none; justify-content: center; align-items: center; z-index: 2000;
+    }
+    #lightbox-overlay img { max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 20px #fff; }
+    #lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 40px; color: #ffd700; cursor: pointer; font-weight: bold; }
 
-  /* Lightbox */
-  #lightbox-overlay { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:2000; }
-  #lightbox-overlay img { max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow:0 0 20px #fff; }
-  #lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 40px; color: #ffd700; cursor:pointer; font-weight: bold; }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    nav { display: none; flex-direction: column; width: 100%; text-align: center; margin-top: 10px; }
-    nav a { margin: 10px 0; font-size: 1.1em; }
-    .hamburger { display: flex; }
-  }
-</style>
+    /* Responsive */
+    @media(max-width:768px){
+      nav { display: none; flex-direction: column; gap: 15px; width: 100%; background: rgba(0,0,0,0.85); padding: 10px 0; }
+      #hamburger { display: block; }
+      header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
 
@@ -87,11 +152,7 @@
     <img src="logo.png" alt="G&G Infrastructure Logo">
     <h1>G&G INFRASTRUCTURE</h1>
   </div>
-  <div class="hamburger" id="hamburger">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <span id="hamburger">&#9776;</span>
   <nav id="nav-links">
     <a href="#about">About Us</a>
     <a href="#projects">Our Projects</a>
@@ -101,7 +162,7 @@
   </nav>
 </header>
 
-<!-- About -->
+<!-- About Us -->
 <section id="about" class="about">
   <h2>About Us</h2>
   <p>
@@ -115,44 +176,62 @@
   </p>
 </section>
 
-<!-- Projects -->
+<!-- Projects Section -->
 <section id="projects">
   <h2>Our Projects</h2>
   <div class="projects">
+
+    <!-- Wikov Indigear -->
     <div class="card">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqy1qVR_Y2pV_cwBB3XFRy_YHgZHxcvfG41_haIOvdh6jYqW5b4yNIINwOWH_RG-kEpfY1TqRnVk9sCenEbIdNQ_GVFPvSTo2y_ZMZIptaZF0rYnvI2uU1abTeSmLqC_sSB2v1b_g=w1080-h720" alt="Wikov Indigear Warehouse" class="lightbox-image">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqy1qVR_Y2pV_cwBB3XFRy_YHgZHxcvfG41_haIOvdh6jYqW5b4yNIINwOWH_RG-kEpfY1TqRnVk9sCenEbIdNQ_GVFPvSTo2y_ZMZIptaZF0rYnvI2uU1abTeSmLqC_sSB2v1b_g=w1080-h720" 
+           alt="Wikov Indigear Warehouse - Chakan" class="lightbox-image">
       <h3>WIKOV INDIGEAR – Wasuli, Chakan</h3>
       <p>A state-of-the-art warehouse facility built for Wikov Indigear in Vasuli, Chakan, showcasing our industrial construction expertise.</p>
     </div>
+
+    <!-- Beninger -->
     <div class="card">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npx7A4rLnlafQ_nWjxK5RL3M5O1d3CwDJjQrUBtBM9NnM2uq7vHGPvJmg6BsXjk_-lsoOPb2uyzvk-utHzA65SOMsnv1kUPbR6z9j1VvjP6E84qlglg-_Saf1-BoNwte_whIVWK=w1080-h720" alt="Beninger Warehouse" class="lightbox-image">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npx7A4rLnlafQ_nWjxK5RL3M5O1d3CwDJjQrUBtBM9NnM2uq7vHGPvJmg6BsXjk_-lsoOPb2uyzvk-utHzA65SOMsnv1kUPbR6z9j1VvjP6E84qlglg-_Saf1-BoNwte_whIVWK=w1080-h720" 
+           alt="Beninger Warehouse - Chakan" class="lightbox-image">
       <h3>BENINGER – Nighoje, Chakan</h3>
       <p>A modern warehouse constructed for Beninger in Chakan, designed with advanced infrastructure and maximum efficiency.</p>
     </div>
+
+    <!-- Tusar Fabengineers -->
     <div class="card">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npdwrrovSC56W2zccjpJnCu0lUjV-NBdeRNPmrAAYTgeBHfSNah4khH0R3bGmumehks_sHRmAMDQrpFe7zZs7m488pabjnq04cgUGQstFVsMk4fDGXV40qKqhWnQhVue3pSBCS6cg=w1080-h720" alt="Tusar Fabengineers Warehouse" class="lightbox-image">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npdwrrovSC56W2zccjpJnCu0lUjV-NBdeRNPmrAAYTgeBHfSNah4khH0R3bGmumehks_sHRmAMDQrpFe7zZs7m488pabjnq04cgUGQstFVsMk4fDGXV40qKqhWnQhVue3pSBCS6cg=w1080-h720" 
+           alt="Tusar Fabengineers Warehouse - Chakan" class="lightbox-image">
       <h3>TUSAR FABENGINEERS – HP Chowk, Chakan</h3>
       <p>A specialized fabrication facility in Chakan, focusing on heavy industrial equipment and precision engineering for global clients.</p>
     </div>
+
+    <!-- Amperehour Solar -->
     <div class="card">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noUqk7FnXis6igrG-rScBljD8Z58hljGzLIx9Iagix4K8nJ5VjBwen-B4Wx_VQb-UMZKwECXAXbNKRI1M-paTBzceIDHlWi-29YAcZbuefnTIh4Y3LSkHlomUqLrqqewj8X_zuN=w1080-h720" alt="Amperehour Solar Technologies" class="lightbox-image">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noUqk7FnXis6igrG-rScBljD8Z58hljGzLIx9Iagix4K8nJ5VjBwen-B4Wx_VQb-UMZKwECXAXbNKRI1M-paTBzceIDHlWi-29YAcZbuefnTIh4Y3LSkHlomUqLrqqewj8X_zuN=w1080-h720" 
+           alt="Amperehour Solar Technologies - Chakan" class="lightbox-image">
       <h3>AMPEREHOUR SOLAR TECHNOLOGIES – Wasuli, Chakan</h3>
       <p>A renewable energy facility specializing in solar technology solutions, demonstrating sustainable industrial construction in Chakan.</p>
     </div>
+
+    <!-- Talegaonkar Profiles -->
     <div class="card">
-      <img src="Talegaonkar.jpeg" alt="Talegaonkar Profiles Pvt. Ltd" class="lightbox-image">
+      <img src="Talegaonkar.jpeg" 
+           alt="Talegaonkar Profiles Pvt. Ltd - Chakan" class="lightbox-image">
       <h3>TALEGAONKAR PROFILES PVT. LTD – Wasuli, Chakan</h3>
       <p>An industrial profiles manufacturing facility in Chakan, showcasing modern infrastructure and efficient industrial design.</p>
     </div>
+
   </div>
 </section>
 
 <!-- Founder -->
-<section id="founder" style="background-color: #2c2a36; padding: 60px 20px;">
-  <div style="max-width: 800px; margin:auto; text-align:center;">
+<section id="founder" style="background-color: #2c2a36;">
+  <div style="max-width: 800px; margin: auto; padding:60px 20px; text-align:center;">
     <h2>Founder</h2>
     <h3>Mr. Dattatraya Ingle</h3>
-    <p>With over <strong>20 years of rich experience in the construction industry</strong>, He has been the guiding force behind G&G INFRASTRUCTURE. His dedication to quality, innovation, and client satisfaction has shaped the company into a trusted name in industrial construction. Passionate about building sustainable infrastructure, he inspires the team to achieve excellence in every project and create spaces that stand the test of time.</p>
+    <p>
+      With over <strong>20 years of rich experience in the construction industry</strong>, He has been the guiding force behind G&G INFRASTRUCTURE. His dedication to quality, innovation, and client satisfaction has shaped the company into a trusted name in industrial construction. Passionate about building sustainable infrastructure, he inspires the team to achieve excellence in every project and create spaces that stand the test of time.
+    </p>
     <p class="italic">"Building not just structures, but legacies."</p>
   </div>
 </section>
@@ -160,9 +239,11 @@
 <!-- Contact -->
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>Email: duingle17@gmail.com</p>
-  <p>Phone: +91 9822798414</p>
-  <p>Location: 📍Chakan, Pune</p>
+  <div class="contact-container">
+    <p>Email: duingle17@gmail.com</p>
+    <p>Phone: +91 9822798414</p>
+    <p>Location: 📍Chakan, Pune</p>
+  </div>
 </section>
 
 <!-- Enquiry -->
@@ -191,13 +272,20 @@
   <p>&copy; 2025 G&G INFRASTRUCTURE | All Rights Reserved</p>
 </footer>
 
-<!-- Lightbox -->
+<!-- Lightbox Overlay -->
 <div id="lightbox-overlay">
   <span id="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="Full Image">
 </div>
 
 <script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  });
+
   // Lightbox
   const lightboxImages = document.querySelectorAll('.lightbox-image');
   const lightboxOverlay = document.getElementById('lightbox-overlay');
@@ -211,16 +299,9 @@
     });
   });
 
-  lightboxClose.addEventListener('click', () => lightboxOverlay.style.display = 'none');
-  lightboxOverlay.addEventListener('click', e => { if(e.target === lightboxOverlay) lightboxOverlay.style.display='none'; });
-
-  // Hamburger toggle
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  hamburger.addEventListener('click', () => {
-    if(navLinks.style.display === 'flex') navLinks.style.display = 'none';
-    else navLinks.style.display = 'flex';
-  });
+  lightboxClose.addEventListener('click', () => { lightboxOverlay.style.display = 'none'; });
+  lightboxOverlay.addEventListener('click', e => { if(e.target === lightboxOverlay) lightboxOverlay.style.display = 'none'; });
 </script>
+
 </body>
 </html>
