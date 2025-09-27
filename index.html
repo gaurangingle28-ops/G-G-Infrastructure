@@ -20,7 +20,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 15px 40px;
+      padding: 15px 30px;
       background: rgba(0,0,0,0.85);
       position: sticky;
       top: 0;
@@ -31,7 +31,6 @@
       display: flex;
       align-items: center;
       gap: 15px;
-      flex-shrink: 0;
     }
     .logo-title img {
       height: 85px;
@@ -42,11 +41,10 @@
       color: #ffd700;
       letter-spacing: 2px;
     }
-
     nav {
       display: flex;
-      align-items: center;
       gap: 15px;
+      flex-wrap: wrap;
     }
     nav a {
       text-decoration: none;
@@ -56,13 +54,12 @@
     }
     nav a:hover { color: #ffd700; }
 
-    /* Hamburger */
+    /* Hamburger for mobile */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
       gap: 5px;
-      margin-top: 10px;
     }
     .hamburger div {
       width: 25px;
@@ -70,7 +67,24 @@
       background-color: #ffd700;
     }
 
-    /* Section */
+    /* Responsive nav menu */
+    @media (max-width: 768px) {
+      nav { 
+        display: none; 
+        flex-direction: column; 
+        width: 100%; 
+        background: rgba(0,0,0,0.95); 
+        margin-top: 10px;
+      }
+      nav a {
+        padding: 12px 20px;
+        border-bottom: 1px solid #444;
+      }
+      nav.active { display: flex; }
+      .hamburger { display: flex; }
+    }
+
+    /* Sections */
     section { padding: 60px 20px; text-align: center; }
     section h2 {
       font-size: 2.2em;
@@ -96,7 +110,7 @@
       text-align: center;
     }
 
-    /* Projects */
+    /* Projects grid */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -109,10 +123,10 @@
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0,0,0,0.6);
       transition: transform 0.3s ease, background 0.3s ease;
-      aspect-ratio: 1 / 1; /* square cards */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      height: 350px;
     }
     .card:hover {
       transform: translateY(-10px);
@@ -120,22 +134,19 @@
     }
     .card img {
       width: 100%;
-      height: auto;
+      height: 150px;
       object-fit: cover;
       cursor: pointer;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      flex-shrink: 0;
     }
     .card h3 {
-      margin: 10px 15px 5px 15px;
+      margin: 10px 15px 5px;
+      font-size: 1.1em;
       color: #ffd700;
-      font-size: 1em;
     }
     .card p {
-      padding: 0 15px 15px 15px;
-      font-size: 0.9em;
+      padding: 0 15px 15px;
+      font-size: 0.95em;
       color: #f0f0f0;
-      flex-grow: 1;
     }
 
     /* Founder Section */
@@ -145,14 +156,8 @@
     #founder p.italic { font-size: 26px; color: #ffd700; font-style: italic; }
 
     /* Contact */
-    #contact {
-      text-align: center;
-      padding-bottom: 60px;
-    }
-    #contact p {
-      font-size: 1.1em;
-      margin-bottom: 10px;
-    }
+    #contact { text-align: center; }
+    #contact p { font-size: 1.1em; margin: 8px 0; }
 
     /* Enquiry */
     #enquiry p {
@@ -182,9 +187,7 @@
       cursor: pointer;
       transition: 0.3s;
     }
-    #enquiry form button:hover {
-      background: #e6c200;
-    }
+    #enquiry form button:hover { background: #e6c200; }
 
     /* Footer */
     footer {
@@ -194,9 +197,6 @@
       color: #ffd700;
       margin-top: 40px;
     }
-
-    a { color: #ffd700; text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
     /* Lightbox */
     #lightbox-overlay {
@@ -223,32 +223,6 @@
       color: #ffd700;
       cursor: pointer;
       font-weight: bold;
-    }
-
-    /* Mobile Responsiveness */
-    @media screen and (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        background: rgba(0,0,0,0.9);
-        padding: 20px;
-      }
-      nav.active { display: flex; }
-      .hamburger { display: flex; }
-      .logo-title h1 { font-size: 1.5em; }
-      section { padding: 40px 15px; }
-      .card { aspect-ratio: auto; }
-      .card img { height: 180px; }
-      #founder h2 { font-size: 28px; }
-      #founder h3 { font-size: 22px; }
-      #founder p { font-size: 16px; }
-      #enquiry form { max-width: 100%; }
     }
   </style>
 </head>
@@ -293,42 +267,32 @@
     <h2>Our Projects</h2>
     <div class="projects">
 
-      <!-- Wikov Indigear -->
       <div class="card">
-        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqy1qVR_Y2pV_cwBB3XFRy_YHgZHxcvfG41_haIOvdh6jYqW5b4yNIINwOWH_RG-kEpfY1TqRnVk9sCenEbIdNQ_GVFPvSTo2y_ZMZIptaZF0rYnvI2uU1abTeSmLqC_sSB2v1b_g=w1080-h720" 
-             alt="Wikov Indigear Warehouse - Chakan" class="lightbox-image">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqy1qVR_Y2pV_cwBB3XFRy_YHgZHxcvfG41_haIOvdh6jYqW5b4yNIINwOWH_RG-kEpfY1TqRnVk9sCenEbIdNQ_GVFPvSTo2y_ZMZIptaZF0rYnvI2uU1abTeSmLqC_sSB2v1b_g=w1080-h720" alt="Wikov Indigear" class="lightbox-image">
         <h3>WIKOV INDIGEAR – Wasuli, Chakan</h3>
         <p>A state-of-the-art warehouse facility built for Wikov Indigear in Vasuli, Chakan, showcasing our industrial construction expertise.</p>
       </div>
 
-      <!-- Beninger -->
       <div class="card">
-        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npx7A4rLnlafQ_nWjxK5RL3M5O1d3CwDJjQrUBtBM9NnM2uq7vHGPvJmg6BsXjk_-lsoOPb2uyzvk-utHzA65SOMsnv1kUPbR6z9j1VvjP6E84qlglg-_Saf1-BoNwte_whIVWK=w1080-h720" 
-             alt="Beninger Warehouse - Chakan" class="lightbox-image">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npx7A4rLnlafQ_nWjxK5RL3M5O1d3CwDJjQrUBtBM9NnM2uq7vHGPvJmg6BsXjk_-lsoOPb2uyzvk-utHzA65SOMsnv1kUPbR6z9j1VvjP6E84qlglg-_Saf1-BoNwte_whIVWK=w1080-h720" alt="Beninger" class="lightbox-image">
         <h3>BENINGER – Nighoje, Chakan</h3>
         <p>A modern warehouse constructed for Beninger in Chakan, designed with advanced infrastructure and maximum efficiency.</p>
       </div>
 
-      <!-- Tusar Fabengineers -->
       <div class="card">
-        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npdwrrovSC56W2zccjpJnCu0lUjV-NBdeRNPmrAAYTgeBHfSNah4khH0R3bGmumehks_sHRmAMDQrpFe7zZs7m488pabjnq04cgUGQstFVsMk4fDGXV40qKqhWnQhVue3pSBCS6cg=w1080-h720" 
-             alt="Tusar Fabengineers Warehouse - Chakan" class="lightbox-image">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npdwrrovSC56W2zccjpJnCu0lUjV-NBdeRNPmrAAYTgeBHfSNah4khH0R3bGmumehks_sHRmAMDQrpFe7zZs7m488pabjnq04cgUGQstFVsMk4fDGXV40qKqhWnQhVue3pSBCS6cg=w1080-h720" alt="Tusar Fabengineers" class="lightbox-image">
         <h3>TUSAR FABENGINEERS – HP Chowk, Chakan</h3>
         <p>A specialized fabrication facility in Chakan, focusing on heavy industrial equipment and precision engineering for global clients.</p>
       </div>
 
-      <!-- Amperehour Solar -->
       <div class="card">
-        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noUqk7FnXis6igrG-rScBljD8Z58hljGzLIx9Iagix4K8nJ5VjBwen-B4Wx_VQb-UMZKwECXAXbNKRI1M-paTBzceIDHlWi-29YAcZbuefnTIh4Y3LSkHlomUqLrqqewj8X_zuN=w1080-h720" 
-             alt="Amperehour Solar Technologies - Chakan" class="lightbox-image">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noUqk7FnXis6igrG-rScBljD8Z58hljGzLIx9Iagix4K8nJ5VjBwen-B4Wx_VQb-UMZKwECXAXbNKRI1M-paTBzceIDHlWi-29YAcZbuefnTIh4Y3LSkHlomUqLrqqewj8X_zuN=w1080-h720" alt="Amperehour Solar" class="lightbox-image">
         <h3>AMPEREHOUR SOLAR TECHNOLOGIES – Wasuli, Chakan</h3>
         <p>A renewable energy facility specializing in solar technology solutions, demonstrating sustainable industrial construction in Chakan.</p>
       </div>
 
-      <!-- Talegaonkar Profiles -->
       <div class="card">
-        <img src="Talegaonkar.jpeg" 
-             alt="Talegaonkar Profiles Pvt. Ltd - Chakan" class="lightbox-image">
+        <img src="Talegaonkar.jpeg" alt="Talegaonkar Profiles" class="lightbox-image">
         <h3>TALEGAONKAR PROFILES PVT. LTD – Wasuli, Chakan</h3>
         <p>An industrial profiles manufacturing facility in Chakan, showcasing modern infrastructure and efficient industrial design.</p>
       </div>
@@ -336,19 +300,17 @@
     </div>
   </section>
 
-  <!-- Founder -->
-  <section id="founder" style="background-color: #2c2a36;">
-    <div style="max-width: 800px; margin: auto; text-align: center; padding: 60px 20px;">
+  <!-- Founder Section -->
+  <section id="founder" style="background-color: #2c2a36; padding: 60px 20px;">
+    <div style="max-width: 800px; margin:auto; text-align:center;">
       <h2>Founder</h2>
       <h3>Mr. Dattatraya Ingle</h3>
-      <p>
-        With over <strong>20 years of rich experience in the construction industry</strong>, He has been the guiding force behind G&G INFRASTRUCTURE.
-      </p>
+      <p>With over <strong>20 years of rich experience in the construction industry</strong>, He has been the guiding force behind G&G INFRASTRUCTURE. His dedication to quality, innovation, and client satisfaction has shaped the company into a trusted name in industrial construction. Passionate about building sustainable infrastructure, he inspires the team to achieve excellence in every project and create spaces that stand the test of time.</p>
       <p class="italic">"Building not just structures, but legacies."</p>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:duingle17@gmail.com">duingle17@gmail.com</a></p>
@@ -356,11 +318,11 @@
     <p>Location: 📍Chakan, Pune</p>
   </section>
 
-  <!-- Enquiry -->
+  <!-- Enquiry Section -->
   <section id="enquiry">
     <h2>Enquiry</h2>
     <p>Have a project in mind? Send us your details and our team will get back to you promptly.</p>
-    <form action="mailto:duingle17@gmail.com" method="post" enctype="text/plain" style="max-width:600px; margin: 20px auto; text-align:left;">
+    <form action="mailto:duingle17@gmail.com" method="post" enctype="text/plain" style="max-width:600px; margin:20px auto; text-align:left;">
       <label for="name">Name:</label>
       <input type="text" id="name" name="Name" required>
       <label for="email">Email:</label>
@@ -378,7 +340,7 @@
     <p>&copy; 2025 G&G INFRASTRUCTURE | All Rights Reserved</p>
   </footer>
 
-  <!-- Lightbox Overlay -->
+  <!-- Lightbox -->
   <div id="lightbox-overlay">
     <span id="lightbox-close">&times;</span>
     <img id="lightbox-img" src="" alt="Full Image">
@@ -386,6 +348,14 @@
 
   <!-- Scripts -->
   <script>
+    // Hamburger toggle
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    // Lightbox
     const lightboxImages = document.querySelectorAll('.lightbox-image');
     const lightboxOverlay = document.getElementById('lightbox-overlay');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -397,12 +367,14 @@
         lightboxOverlay.style.display = 'flex';
       });
     });
-    lightboxClose.addEventListener('click', () => { lightboxOverlay.style.display = 'none'; });
-    lightboxOverlay.addEventListener('click', e => { if(e.target === lightboxOverlay) lightboxOverlay.style.display = 'none'; });
 
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
-    hamburger.addEventListener('click', () => { nav.classList.toggle('active'); });
+    lightboxClose.addEventListener('click', () => {
+      lightboxOverlay.style.display = 'none';
+    });
+
+    lightboxOverlay.addEventListener('click', e => {
+      if(e.target === lightboxOverlay) lightboxOverlay.style.display = 'none';
+    });
   </script>
 
 </body>
