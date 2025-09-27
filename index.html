@@ -6,7 +6,6 @@
 <title>G&G INFRASTRUCTURE</title>
 <meta name="google-site-verification" content="3SlyCK9cYWTNML4fzZPS4IvoJDXd1Ij62qc3yCG3i80" />
 <style>
-  /* Reset & Base */
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:"Segoe UI", Arial, sans-serif; line-height:1.6; background: linear-gradient(135deg,#1f1c2c,#928dab); color:#f5f5f5; }
   a { color:#ffd700; text-decoration:none; }
@@ -16,7 +15,7 @@
   /* Header */
   header { background: rgba(0,0,0,0.85); position: sticky; top:0; z-index:1000; }
   .nav-wrap { display:flex; flex-direction:column; padding:12px 16px; gap:6px; }
-  .logo-title { display:flex; align-items:center; gap:12px; }
+  .logo-title { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
   .logo-title img { height:72px; width:140px; object-fit:contain; }
   .logo-title h1 { font-size:2.2rem; color:#ffd700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 
@@ -60,30 +59,11 @@
   #founder p { font-size:1.05rem; color:#dcdcdc; line-height:1.65; margin-bottom:18px; }
   #founder p.italic { font-size:1.4rem; color:#ffd700; font-style:italic; }
 
-/* Contact Center Alignment */
-.contact-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* center horizontally */
-  justify-content: center;
-  gap: 12px;
-  max-width: 400px;  /* optional, to keep it compact */
-  margin: 0 auto;    /* center section horizontally */
-}
-
-.contact-center p {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.1rem;
-}
-
-.contact-center .icon {
-  font-size: 1.3rem;
-  color: #ffd700;
-  min-width: 24px;
-  text-align: center;
-}
+  /* Contact Center */
+  #contact { text-align:center; padding:40px 16px; }
+  #contact .contact-center { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; max-width:400px; margin:0 auto; }
+  #contact .contact-center p { display:flex; align-items:center; gap:8px; font-size:1.1rem; }
+  #contact .contact-center .icon { font-size:1.3rem; color:#ffd700; min-width:24px; text-align:center; }
 
   /* Enquiry form */
   form.enquiry { max-width:640px; margin:18px auto; text-align:left; background:rgba(0,0,0,0.25); border-radius:12px; padding:16px; }
@@ -101,10 +81,11 @@
   #lightbox-overlay img { max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 0 20px #fff; }
   #lightbox-close { position:absolute; top:20px; right:30px; font-size:40px; color:#ffd700; cursor:pointer; font-weight:bold; }
 
-  /* Responsive */
   @media screen and (max-width:768px) {
     nav.primary { display:none; }
-    .hamburger { display:flex; align-items:center; justify-content:center; }
+    .hamburger { display:flex; align-items:center; justify-content:center; margin-top:6px; }
+    .logo-title { flex-direction:column; align-items:flex-start; gap:4px; }
+    .logo-title h1 { font-size:1.6rem; text-align:left; }
   }
 </style>
 </head>
@@ -150,6 +131,26 @@
   <h2>Our Projects</h2>
   <div class="projects">
     <div class="card">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqy1qVR_Y2pV_cwBB3XFRy_YHgZHxcvfG41_haIOvdh6jYqW5b4yNIINwOWH_RG-kEpfY1TqRnVk9sCenEbIdNQ_GVFPvSTo2y_ZMZIptaZF0rYnvI2uU1abTeSmLqC_sSB2v1b_g=w1080-h720" alt="Wikov Indigear Warehouse - Chakan" class="lightbox-image">
+      <h3>WIKOV INDIGEAR – Wasuli, Chakan</h3>
+      <p>A state-of-the-art warehouse facility built for Wikov Indigear in Vasuli, Chakan, showcasing our industrial construction expertise.</p>
+    </div>
+    <div class="card">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npx7A4rLnlafQ_nWjxK5RL3M5O1d3CwDJjQrUBtBM9NnM2uq7vHGPvJmg6BsXjk_-lsoOPb2uyzvk-utHzA65SOMsnv1kUPbR6z9j1VvjP6E84qlglg-_Saf1-BoNwte_whIVWK=w1080-h720" alt="Beninger Warehouse - Chakan" class="lightbox-image">
+      <h3>BENINGER – Nighoje, Chakan</h3>
+      <p>A modern warehouse constructed for Beninger in Chakan, designed with advanced infrastructure and maximum efficiency.</p>
+    </div>
+    <div class="card">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npdwrrovSC56W2zccjpJnCu0lUjV-NBdeRNPmrAAYTgeBHfSNah4khH0R3bGmumehks_sHRmAMDQrpFe7zZs7m488pabjnq04cgUGQstFVsMk4fDGXV40qKqhWnQhVue3pSBCS6cg=w1080-h720" alt="Tusar Fabengineers Warehouse - Chakan" class="lightbox-image">
+      <h3>TUSAR FABENGINEERS – HP Chowk, Chakan</h3>
+      <p>A specialized fabrication facility in Chakan, focusing on heavy industrial equipment and precision engineering for global clients.</p>
+    </div>
+    <div class="card">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noUqk7FnXis6igrG-rScBljD8Z58hljGzLIx9Iagix4K8nJ5VjBwen-B4Wx_VQb-UMZKwECXAXbNKRI1M-paTBzceIDHlWi-29YAcZbuefnTIh4Y3LSkHlomUqLrqqewj8X_zuN=w1080-h720" alt="Amperehour Solar Technologies - Chakan" class="lightbox-image">
+      <h3>AMPEREHOUR SOLAR TECHNOLOGIES – Wasuli, Chakan</h3>
+      <p>A renewable energy facility specializing in solar technology solutions, demonstrating sustainable industrial construction in Chakan.</p>
+    </div>
+    <div class="card">
       <img src="Talegaonkar.jpeg" alt="Talegaonkar Profiles Pvt. Ltd - Chakan" class="lightbox-image">
       <h3>TALEGAONKAR PROFILES PVT. LTD – Wasuli, Chakan</h3>
       <p>An industrial profiles manufacturing facility in Chakan, showcasing modern infrastructure and efficient industrial design.</p>
@@ -168,9 +169,11 @@
 <!-- Contact -->
 <section id="contact" class="container">
   <h2>Contact Us</h2>
-  <p><span class="icon">📧</span> Email: <a href="mailto:duingle17@gmail.com">duingle17@gmail.com</a></p>
-  <p><span class="icon">📞</span> Phone: +91 9822798414</p>
-  <p><span class="icon">📍</span> Location: Chakan, Pune</p>
+  <div class="contact-center">
+    <p><span class="icon">📧</span> Email: <a href="mailto:duingle17@gmail.com">duingle17@gmail.com</a></p>
+    <p><span class="icon">📞</span> Phone: +91 9822798414</p>
+    <p><span class="icon">📍</span> Location: Chakan, Pune</p>
+  </div>
 </section>
 
 <!-- Enquiry -->
@@ -204,4 +207,23 @@
   // Lightbox
   const lightboxImages = document.querySelectorAll('.lightbox-image');
   const lightboxOverlay = document.getElementById('lightbox-overlay');
- 
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+  lightboxImages.forEach(img => img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightboxOverlay.style.display = 'flex';
+  }));
+  lightboxClose.addEventListener('click', () => lightboxOverlay.style.display='none');
+  lightboxOverlay.addEventListener('click', e => { if(e.target===lightboxOverlay) lightboxOverlay.style.display='none'; });
+
+  // Hamburger
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+    mobileMenu.style.display = expanded ? 'none' : 'flex';
+  });
+</script>
+</body>
+</html>
