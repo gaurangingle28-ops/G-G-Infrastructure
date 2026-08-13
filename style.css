@@ -1,0 +1,679 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1f1c2c,
+            #403b5c
+        );
+
+    color: #f5f5f5;
+
+    line-height: 1.6;
+
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* HEADER */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 12px 5%;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.35);
+
+}
+
+
+.logo-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.logo-title img {
+
+    width: 105px;
+
+    height: 78px;
+
+    object-fit: contain;
+
+}
+
+
+.logo-title h1 {
+
+    font-size:
+        clamp(1.25rem, 2.5vw, 2rem);
+
+    color: #ffd700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* NAVIGATION */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+nav a {
+
+    font-weight: 700;
+
+    padding: 8px 4px;
+
+    transition: 0.25s;
+
+}
+
+
+nav a:hover {
+
+    color: #ffd700;
+
+}
+
+
+#hamburger {
+
+    display: none;
+
+    font-size: 30px;
+
+    color: #ffd700;
+
+    cursor: pointer;
+
+}
+
+
+/* ANNOUNCEMENT */
+
+.announcement {
+
+    background: #ffd700;
+
+    color: #111;
+
+    padding: 9px 0;
+
+    font-weight: 700;
+
+    border-bottom: 2px solid white;
+
+}
+
+
+/* HERO */
+
+.hero {
+
+    min-height: 70vh;
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+
+.hero-content {
+
+    max-width: 900px;
+
+}
+
+
+.hero h2 {
+
+    font-size:
+        clamp(2.1rem, 5vw, 4.2rem);
+
+    color: #ffd700;
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+}
+
+
+.hero p {
+
+    font-size:
+        clamp(1rem, 2vw, 1.25rem);
+
+    margin-bottom: 28px;
+
+    color: #eee;
+
+}
+
+
+/* BUTTON */
+
+.btn {
+
+    display: inline-block;
+
+    background: #ffd700;
+
+    color: #111;
+
+    font-weight: 800;
+
+    padding: 12px 24px;
+
+    border-radius: 7px;
+
+    margin: 5px;
+
+    transition: 0.25s;
+
+}
+
+
+.btn:hover {
+
+    background: #e5bf00;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* SECTIONS */
+
+section {
+
+    padding: 70px 5%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+section h2 {
+
+    text-align: center;
+
+    color: #ffd700;
+
+    font-size:
+        clamp(1.8rem, 4vw, 2.6rem);
+
+    margin-bottom: 28px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* ABOUT */
+
+.about-text {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    font-size: 1.08rem;
+
+}
+
+
+.about-text p {
+
+    margin-bottom: 18px;
+
+}
+
+
+.highlight {
+
+    color: #ffd700;
+
+    font-weight: 800;
+
+}
+
+
+.quote {
+
+    text-align: center;
+
+    color: #ffd700;
+
+    font-size:
+        clamp(1.5rem, 3vw, 2.2rem);
+
+    font-style: italic;
+
+    margin-top: 30px;
+
+    font-weight: 700;
+
+}
+
+
+/* PROJECTS */
+
+.projects {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(270px, 1fr)
+        );
+
+    gap: 25px;
+
+}
+
+
+.card {
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.45);
+
+    transition: 0.3s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-7px);
+
+    background:
+        rgba(255, 255, 255, 0.16);
+
+}
+
+
+.card img {
+
+    width: 100%;
+
+    height: 210px;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+}
+
+
+.card-body {
+
+    padding: 18px;
+
+}
+
+
+.card h3 {
+
+    color: #ffd700;
+
+    margin-bottom: 9px;
+
+    font-size: 1.15rem;
+
+}
+
+
+.card p {
+
+    color: #eee;
+
+}
+
+
+/* INFORMATION BOX */
+
+.info-box {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+}
+
+
+.info-box h3 {
+
+    color: #ffd700;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* CONTACT */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(240px, 1fr)
+        );
+
+    gap: 20px;
+
+}
+
+
+.contact-card {
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+}
+
+
+.contact-card h3 {
+
+    color: #ffd700;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* FORM */
+
+form {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 7px;
+
+    border: 1px solid #777;
+
+    background: #252330;
+
+    color: white;
+
+    font-size: 1rem;
+
+}
+
+
+button {
+
+    border: 0;
+
+    cursor: pointer;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    background:
+        rgba(0, 0, 0, 0.9);
+
+    text-align: center;
+
+    padding: 28px 15px;
+
+    color: #ffd700;
+
+    margin-top: 30px;
+
+}
+
+
+/* LIGHTBOX */
+
+.lightbox {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.94);
+
+    z-index: 2000;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+}
+
+
+.lightbox.open {
+
+    display: flex;
+
+}
+
+
+.lightbox img {
+
+    max-width: 92vw;
+
+    max-height: 88vh;
+
+    border-radius: 10px;
+
+}
+
+
+.close {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 12px;
+
+    color: #ffd700;
+
+    font-size: 42px;
+
+    cursor: pointer;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    header {
+
+        padding: 10px 4%;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .logo-title img {
+
+        width: 82px;
+
+        height: 62px;
+
+    }
+
+
+    nav {
+
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background: #111;
+
+    }
+
+
+    nav.open {
+
+        display: flex;
+
+    }
+
+
+    nav a {
+
+        text-align: center;
+
+        padding: 12px;
+
+        border-top: 1px solid #333;
+
+    }
+
+
+    #hamburger {
+
+        display: block;
+
+    }
+
+
+    .announcement {
+
+        font-size: 14px;
+
+    }
+
+
+    section {
+
+        padding: 55px 5%;
+
+    }
+
+}
