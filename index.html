@@ -1,433 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G&G INFRASTRUCTURE</title>
-  <meta name="google-site-verification" content="3SlyCK9cYWTNML4fzZPS4IvoJDXd1Ij62qc3yCG3i80" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5447007936471218"
-     crossorigin="anonymous"></script>
-  
-   <!--  Favicon for browser tab -->
-<link rel="icon" type="image/jpeg" sizes="32x32" href="/logo.jpeg">
-<link rel="shortcut icon" href="/logo.jpeg">
-<link rel="apple-touch-icon" href="/logo.jpeg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!--  Structured Data for Google Organization Logo -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "url": "https://www.gg-infrastructure.com",
-  "logo": "https://www.gg-infrastructure.com/logo.jpeg"
-}
-</script>
+    <title>G&G INFRASTRUCTURE | Industrial Construction in Chakan</title>
 
-<!-- Open Graph & Twitter -->
-<meta property="og:image" content="https://www.gg-infrastructure.com/logo.jpeg">
-<meta name="twitter:image" content="https://www.gg-infrastructure.com/logo.jpeg">
+    <meta name="description"
+          content="G&G Infrastructure - Industrial Warehouses and Sheds in Chakan, Pune">
 
-<!--  Optional meta tags for SEO -->
-<meta name="description" content="G&G Infrastructure – Industrial Warehouses and Sheds in Chakan">
-  
-<style>
-  
-  .announcement{
-    background:#ffd700;
-    color:#000;
-    padding:10px 0;
-    font-size:18px;
-    font-weight:bold;
-    text-align:center;
-    border-top:2px solid #fff;
-    border-bottom:2px solid #fff;
-}
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
 
-.announcement marquee{
-    width:100%;
-}
-
-@media(max-width:768px){
-    .announcement{
-        font-size:14px;
-    }
-}
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-padding-top: 110px; scroll-behavior: smooth; }
-  body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
-    color: #f5f5f5;
-    line-height: 1.6;
-  }
-
-  /* Header */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: rgba(0,0,0,0.85);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    flex-wrap: wrap;
-  }
-  .logo-title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  .logo-title img { height: 125px; width: auto; }
-  .logo-title h1 { font-size: 2.5em; color: #ffd700; letter-spacing: 2px; }
-  nav {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  nav a:hover { color: #ffd700; }
-
-  /* Hamburger */
-  #hamburger {
-    display: none;
-    font-size: 30px;
-    color: #ffd700;
-    cursor: pointer;
-  }
-
-  /* Section */
-  section { padding: 60px 20px; text-align: center; scroll-behavior: smooth; }
-  section h2 {
-    font-size: 2.2em;
-    margin-bottom: 25px;
-    color: #ffd700;
-    text-transform: uppercase;
-  }
-  .about p { max-width: 900px; margin: 0 auto 20px auto; font-size: 1.1em; line-height: 1.8; color: #f0f0f0; }
-  .parent-company { display: block; margin-top: 10px; font-size: 1.5em; font-weight: bold; color: #ffd700; text-align: center; }
-
-  /* Projects */
-  .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px; }
-  .card {
-    background: rgba(255,255,255,0.15);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-  .card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.25); }
-  .card img { width: 100%; height: 200px; object-fit: cover; cursor: pointer; }
-  .card h3 { margin: 15px 0 10px; color: #ffd700; }
-  .card p { padding: 0 15px 20px; font-size: 1em; color: #f0f0f0; }
-
-  /* Founder */
-  #founder h2 { font-size: 36px; color: #ffd700; margin-bottom: 20px; }
-  #founder h3 { font-size: 28px; color: #f0f0f0; margin-bottom: 10px; }
-  #founder p { font-size: 18px; color: #dcdcdc; line-height: 1.6; margin-bottom: 20px; }
-  #founder p.italic { font-size: 26px; color: #ffd700; font-style: italic; }
-
-  /* Contact */
-  #contact { padding: 50px 20px; text-align: center; }
-  #contact .contact-container { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-
-  /* Enquiry */
-  #enquiry { padding: 50px 20px; text-align: center; }
-  #enquiry p { max-width: 700px; margin: 0 auto 30px auto; font-size: 1.1em; color: #f0f0f0; }
-  #enquiry form {
-    max-width: 500px;
-    margin: 20px auto;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  #enquiry input, #enquiry textarea {
-    width: 100%;
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    background: #2c2a36;
-    color: #fff;
-    font-size: 1em;
-  }
-  #enquiry button {
-    padding: 12px 25px;
-    background: #ffd700;
-    color: #000;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  #enquiry button:hover { background: #e6c200; }
-
-  /* Footer */
-  footer { padding: 25px; text-align: center; background: rgba(0,0,0,0.85); color: #ffd700; margin-top: 40px; }
-  a { color: #fff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* Lightbox */
-  #lightbox-overlay {
-    position: fixed; top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9);
-    display: none; justify-content: center; align-items: center; z-index: 2000;
-  }
-  #lightbox-overlay img { max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 20px #fff; }
-  #lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 40px; color: #ffd700; cursor: pointer; font-weight: bold; }
-
-  /* ✅ Responsive - FIX APPLIED */
-  @media(max-width:768px){
-    nav { 
-      display: none; 
-      flex-direction: column; 
-      gap: 15px; 
-      width: 100%; 
-      background: rgba(0,0,0,0.85); 
-      padding: 10px 0; 
-    }
-    #hamburger { 
-      display: block; 
-    }
-    header { 
-      flex-direction: row; 
-      align-items: center; 
-      justify-content: space-between;
-    }
-  }
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Header -->
+<!-- HEADER -->
 <header>
-  <div class="logo-title">
-    <img src="logo.jpeg" alt="G&G Infrastructure Logo">
-    <h1>G&G INFRASTRUCTURE</h1>
-  </div>
-  <span id="hamburger">&#9776;</span>
-  <nav id="nav-links">
-    <a href="#about">About Us</a>
-    <a href="#projects">Our Projects</a>
-    <a href="#founder">Founder</a>
-    <a href="#contact">Contact</a>
-    <a href="#enquiry">Enquiry</a>
-  </nav>
+
+    <div class="logo-title">
+        <a href="index.html">
+            <img src="logo.jpeg" alt="G&G Infrastructure Logo">
+        </a>
+
+        <h1>G&G INFRASTRUCTURE</h1>
+    </div>
+
+    <!-- Mobile Menu -->
+    <span id="hamburger">&#9776;</span>
+
+    <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="projects.html">Projects</a>
+        <a href="founder-team.html">Founder & Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="enquiry.html">Enquiry</a>
+    </nav>
+
 </header>
 
-  <!-- Hiring Announcement -->
+
+<!-- HIRING ANNOUNCEMENT -->
 <div class="announcement">
-    <marquee behavior="scroll" direction="left" scrollamount="5">
-       🚨Announcement: WE ARE HIRING! | Civil Engineers (Freshers & Experienced) |
-        Qualification: B.E. Civil / Diploma Civil |
-        Location: Chakan(MIDC), Pune |
-        Send Resume: gginfrastructure21@gmail.com |
+
+    <marquee scrollamount="5">
+
+        🚨 WE ARE HIRING! |
+        Civil Engineers (Freshers & Experienced) |
+        B.E. Civil / Diploma Civil |
+        Location: Chakan (MIDC), Pune |
+        Send Resume: gginfrastructure21@gmail.com
+
     </marquee>
+
 </div>
 
-  
-<!-- About Us -->
-<section id="about" class="about">
-  <h2>About Us</h2>
-  <p>
-    G&G INFRASTRUCTURE is a leading construction company specializing in Industrial and Commercial infrastructure.<B> Since, 2000 Parent Company –'Shivam Earth Movers & Engineers'</B>
-    With years of experience in building warehouses, industrial sheds, we provide innovative and reliable construction solutions tailored to our clients’ needs. Our commitment to quality, safety, 
-    and efficiency makes us a trusted partner for over <B>40+ Projects across Chakan and Pune region.</B>
-  </p>
-  
- 
-  <p>
-    We are among the Top Industrial Constructor across Chakan Midc,Pune area. our <B> Quality </B> is one of the main factor in construction and our company's overall Growth.
-    <B> Clients Trust and Work Quality </B> has lead to company's expansion while building New and large Industrial projects.
-  </p>
-  <p style="margin-top:20px; font-weight:bold; font-size:2.0em; color:#ffd700;">
-    "Our Work Reflects Our Quality"
-  </p>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h2>
+            Industrial Construction Built on Quality
+        </h2>
+
+        <p>
+            G&G INFRASTRUCTURE specializes in industrial
+            warehouses, sheds and commercial infrastructure
+            across Chakan and the Pune region.
+        </p>
+
+        <a href="projects.html" class="btn">
+            View Our Projects
+        </a>
+
+        <a href="enquiry.html" class="btn">
+            Start an Enquiry
+        </a>
+
+    </div>
+
 </section>
 
-<!-- Projects Section -->
-<section id="projects">
-  <h2>Our Projects</h2>
-  <div class="projects">
 
-    <!-- Wikov Indigear -->
-    <div class="card">
-      <img src="Wikov Indigear.jpeg"
-           alt="Wikov Indigear Warehouse - Chakan" class="lightbox-image">
-      <h3>WIKOV INDIGEAR – Wasuli, Chakan</h3>
-      <p>A warehouse facility which provides mechanical transmission solutions such as Industrial gearboxes, and related components for industries including automotive, oil & gas, and industrial machinery.</p>
+<!-- WHY US -->
+<section>
+
+    <h2>Why G&G Infrastructure?</h2>
+
+    <div class="about-text">
+
+        <p>
+            With experience built through
+            <span class="highlight">40+ projects</span>,
+            our focus is quality, safety, planning and
+            reliable execution.
+        </p>
+
+        <p>
+            Our parent company,
+            <span class="highlight">
+                Shivam Earth Movers & Engineers
+            </span>,
+            has supported our long-term construction
+            experience since 2000.
+        </p>
+
+        <div class="quote">
+            "Our Work Reflects Our Quality"
+        </div>
+
     </div>
 
-    <!-- Beninger -->
-    <div class="card">
-      <img src="Beninger.jpeg"
-           alt="Beninger India - Chakan" class="lightbox-image">
-      <h3>BENINGER – Nighoje, Chakan</h3>
-      <p>A modern warehouse specializing in textile finishing and tire cord machinery, designed with advanced infrastructure and maximum efficiency.</p>
-    </div>
-
-    <!-- Tusar Fabengineers -->
-    <div class="card">
-      <img src="Tushar FabEngineers.jpeg"
-           alt="Tusar FabEngineers Warehouse - Chakan" class="lightbox-image">
-      <h3>TUSAR FABENGINEERS – Wasuli, Chakan</h3>
-      <p>A specialized fabrication facility in Chakan, focusing on heavy industrial equipment and precision engineering for global clients.</p>
-    </div>
-
-    <!-- Amperehour Solar -->
-    <div class="card">
-      <img src="Amperehour Solar.jpeg"
-           alt="Amperehour Solar Technologies - Chakan" class="lightbox-image">
-      <h3>AMPEREHOUR SOLAR TECHNOLOGIES – Shinde, Chakan</h3>
-      <p>A renewable energy facility specializing in solar technology solutions, demonstrating sustainable industrial construction in Chakan.</p>
-    </div>
-
-    <!-- Talegaonkar Profiles -->
-    <div class="card">
-      <img src="Talegaonkar.jpeg" 
-           alt="Talegaonkar Profiles Pvt. Ltd - Chakan" class="lightbox-image">
-      <h3>TALEGAONKAR PROFILES PVT. LTD – Wasuli, Chakan</h3>
-      <p>An industrial profiles manufacturing and steel fabrication company specializing in CNC services, metal parts, and equipment in Chakan.</p>
-    </div>
-
-     <!-- SPO -->
-    <div class="card">
-      <img src="Spo.jpeg" 
-           alt="SPO Pvt. Ltd - Chakan" class="lightbox-image">
-      <h3>SPO PVT. LTD – Wasuli, Chakan</h3>
-      <p>An industrial company specializing in the development, production, installation, and maintenance of equipment for gas, oil, petrochemical, and general industrial processes.</p>
-    </div>
-    
- <!-- Miracle Cables -->
-    <div class="card">
-      <img src="Miracle Cables.jpeg" 
-           alt="Miracle Cables Pvt. Ltd - Chakan" class="lightbox-image">
-      <h3>Miracle Cables PVT. LTD – Wasuli, Chakan</h3>
-      <p>An leading manufacturer, exporter, and supplier of industrial and automotive cables, specializing in custom wires, harnesses, and high-performance cabling solutions.</p>
-    </div>
-
-     <!-- Med Connect -->
-    <div class="card">
-      <img src="Med Connect.jpeg" 
-           alt="Med Connect Pvt. Ltd - Chakan" class="lightbox-image">
-      <h3>Med Connect PVT. LTD – Wasuli, Chakan</h3>
-      <p>An industrial  manufacturing facility in Chakan, showcasing modern infrastructure and efficient industrial design.</p>
-    </div>
-
-     <!-- Alchemy -->
-    <div class="card">
-      <img src="Alchemy.jpeg" 
-           alt="Alchemy Pvt. Ltd - Chakan" class="lightbox-image">
-      <h3>Alchemy PVT. LTD – Wasuli, Chakan</h3>
-      <p>An industrial modern steel and alloy foundry specializing in high-quality Steel, Alloy Steel, and Super Alloy Castings for pumps, valves, and critical industries, offering precision, reliability, and certified manufacturing processes.</p>
-    </div>
-
-     <!-- Reginson -->
-    <div class="card">
-      <img src="Reginson.jpeg" 
-           alt="Reginson India Pvt. Ltd - Chakan" class="lightbox-image">
-      <h3>Reginson India PVT. LTD – Wasuli, Chakan</h3>
-      <p>An industrial facility focuses on sub-contract machining of precision components for multiple industries, including aerospace, medical, oil and gas, and automotive sectors.</p>
-    </div>
-
-  </div>
 </section>
 
-<!-- Founder -->
-<section id="founder" style="background-color: #2c2a36;">
-  <div style="max-width: 800px; margin: auto; padding:60px 20px; text-align:center;">
-    <h2>Founder</h2>
-    <h3>Mr. Dattatraya Ingle</h3>
-    <p>
-      With over <B>25+ years of rich experience in the construction industry</B>, He has been the guiding force behind G&G INFRASTRUCTURE. His dedication to quality, innovation, and client satisfaction has shaped the company into a trusted name in industrial construction. Passionate about building sustainable infrastructure, he inspires the team to achieve excellence in every project and create spaces that stand the test of time.
-    </p>
-    <p class="italic">"Building not just structures, but legacies."</p>
-  </div>
-</section>
 
-  <!-- Our Team -->
-<section id="Our Team">
-  <h2>Our Team</h2>
-  <p>Hello! We are Civil Engineers work as a team for G&G Infrastructure specialized in Industrial Warehouses.</p>
-  <p> Dedication, Planning, Team Work, Focus on Quality as well as Quantity Helps to Build Best Infrastructure.</p>
-  </div>
-</section>
-  
-<!-- Contact -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <div class="contact-container">
-    <p>Personal Email: duingle17@gmail.com</p>
-    <p>Company  Email: gginfrastructure21@gmail.com</p>
-    <p>Location: 📍Chakan, Pune</p>
-  </div>
-</section>
-
-<!-- Enquiry -->
-<section id="enquiry">
-  <h2>Enquiry</h2>
-  <p>Have a project in mind? Send us your details and our team will get back to you promptly.</p>
-  <form action="mailto:duingle17@gmail.com" method="post" enctype="text/plain">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="Name" required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="Email" required>
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="Phone" required>
-    <label for="message">Message / Project Details:</label>
-    <textarea id="message" name="Message" rows="5" required></textarea>
-    <button type="submit">Submit</button>
-  </form>
-</section>
-
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
-  <p>&copy; 2025 G&G INFRASTRUCTURE | All Rights Reserved</p>
+
+    <p>
+        &copy; 2026 G&G INFRASTRUCTURE |
+        All Rights Reserved
+    </p>
+
+    <p>
+        Industrial Warehouses & Sheds in Chakan, Pune
+    </p>
+
 </footer>
 
-<!-- Lightbox Overlay -->
-<div id="lightbox-overlay">
-  <span id="lightbox-close">&times;</span>
-  <img id="lightbox-img" src="" alt="Full Image">
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+
+    <span class="close" onclick="closeLightbox()">
+        &times;
+    </span>
+
+    <img id="lightbox-img" src="" alt="Project Image">
+
 </div>
 
-<script>
-  // Hamburger toggle
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-  });
 
-  // Lightbox
-  const lightboxImages = document.querySelectorAll('.lightbox-image');
-  const lightboxOverlay = document.getElementById('lightbox-overlay');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxClose = document.getElementById('lightbox-close');
-
-  lightboxImages.forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightboxOverlay.style.display = 'flex';
-    });
-  });
-
-  lightboxClose.addEventListener('click', () => { lightboxOverlay.style.display = 'none'; });
-  lightboxOverlay.addEventListener('click', e => { if(e.target === lightboxOverlay) lightboxOverlay.style.display = 'none'; });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
-
-
-
-
 
 
 
