@@ -289,6 +289,35 @@
 
 
 <script src="script.js"></script>
+    <!-- WAREHOUSE PHOTO SLIDER JAVASCRIPT -->
+    <script>
+    const warehousePhotos = [
+        "Ghanwat.jpeg",
+        "Ghanwat-2.jpeg",
+        "Ghanwat-3.jpeg",
+        "Ghanwat-4.jpeg"
+    ];
 
+    let warehousePhotoIndex = 0;
+
+    function changeWarehousePhoto(direction) {
+
+        warehousePhotoIndex += direction;
+
+        if (warehousePhotoIndex >= warehousePhotos.length) {
+            warehousePhotoIndex = 0;
+        }
+
+        if (warehousePhotoIndex < 0) {
+            warehousePhotoIndex = warehousePhotos.length - 1;
+        }
+
+        document.getElementById("warehousePhoto").src =
+            warehousePhotos[warehousePhotoIndex];
+
+        document.getElementById("warehousePhotoNumber").textContent =
+            warehousePhotoIndex + 1;
+    }
+    </script>
 </body>
 </html>
