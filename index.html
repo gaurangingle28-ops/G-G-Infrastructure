@@ -162,42 +162,80 @@
 
         </div>
 
-        <!-- FEATURED WAREHOUSE FOR RENT -->
+<!-- =================================
+     WAREHOUSE AVAILABLE FOR RENT
+================================= -->
+
 <div class="service-card warehouse-rental">
 
-    <a href="Ghanwat.jpeg" target="_blank" rel="noopener">
-        <img src="Ghanwat.jpeg"
-             alt="20,000 sq. ft. warehouse available for rent in Chakan MIDC, Vasuli"
-             class="warehouse-image">
-    </a>
+    <!-- WAREHOUSE PHOTO SLIDER -->
+    <div class="warehouse-slider">
 
-    <h3>New Warehouse Available for Rent</h3>
+        <img id="warehousePhoto"
+             src="Ghanwat.jpeg"
+             alt="20,000 sq. ft. warehouse available for rent in Chakan MIDC, Vasuli">
 
-    <p>
-        <strong>📍 Location:</strong> Chakan MIDC, Vasuli
-    </p>
+        <!-- PREVIOUS -->
+        <button class="warehouse-prev"
+                onclick="changeWarehousePhoto(-1)"
+                aria-label="Previous warehouse photo">
+            &#10094;
+        </button>
 
-    <p>
-        <strong>📐 Area:</strong> 20,000 sq. ft.
-    </p>
+        <!-- NEXT -->
+        <button class="warehouse-next"
+                onclick="changeWarehousePhoto(1)"
+                aria-label="Next warehouse photo">
+            &#10095;
+        </button>
 
-    <p>
-        <strong>🏭 Suitable for:</strong> Industrial, storage,
-        manufacturing and logistics requirements.
-    </p>
+        <!-- PHOTO NUMBER -->
+        <div class="warehouse-photo-count">
+            <span id="warehousePhotoNumber">1</span> / 4
+        </div>
 
-    <p>
-        <strong>💰 Rent:</strong> Contact for Rent
-    </p>
+    </div>
 
-    <p>
-        <strong>📞 Contact:</strong>
-        <a href="tel:9822798414">9822798414</a>
-    </p>
 
-    <a href="enquiry.html" class="service-btn">
-        Enquire Now
-    </a>
+    <!-- PARTITION -->
+    <div class="warehouse-divider"></div>
+
+
+    <!-- WAREHOUSE DETAILS -->
+    <div class="warehouse-details">
+
+        <h3>New Warehouse Available for Rent</h3>
+
+        <p>
+            <strong>📍 Location:</strong>
+            Chakan MIDC, Vasuli
+        </p>
+
+        <p>
+            <strong>📐 Area:</strong>
+            20,000 sq. ft.
+        </p>
+
+        <p>
+            <strong>🏭 Suitable for:</strong>
+            Industrial, storage, manufacturing and logistics requirements.
+        </p>
+
+        <p>
+            <strong>💰 Rent:</strong>
+            Contact for Rent
+        </p>
+
+        <p>
+            <strong>📞 Contact:</strong>
+            <a href="tel:9822798414">9822798414</a>
+        </p>
+
+        <a href="enquiry.html" class="service-btn">
+            Enquire Now
+        </a>
+
+    </div>
 
 </div>
 
