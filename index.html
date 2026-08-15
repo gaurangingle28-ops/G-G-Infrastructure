@@ -286,36 +286,108 @@
 </div>
 
 
-<script src="script.js"></script>
-    <!-- WAREHOUSE PHOTO SLIDER JAVASCRIPT -->
-    <script>
-    const warehousePhotos = [
-        "Ghanwat.jpeg",
-        "Ghanwat-2.jpeg",
-        "Ghanwat-3.jpeg",
-        "Ghanwat-4.jpeg"
-    ];
+/* =================================
+   WAREHOUSE PHOTO SLIDESHOW
+================================= */
 
-    let warehousePhotoIndex = 0;
+const warehousePhotos = [
+    "Ghanwat.jpeg",
+    "Ghanwat-2.jpeg",
+    "Ghanwat-3.jpeg",
+    "Ghanwat-4.jpeg"
+];
 
-    function changeWarehousePhoto(direction) {
+let warehousePhotoIndex = 0;
+let warehouseSlideshow;
 
-        warehousePhotoIndex += direction;
+
+/* =================================
+   SHOW WAREHOUSE PHOTO
+================================= */
+
+function showWarehousePhoto(index) {
+
+    const warehousePhoto =
+        document.getElementById("warehousePhoto");
+
+    const warehousePhotoNumber =
+        document.getElementById("warehousePhotoNumber");
+
+    if (!warehousePhoto || !warehousePhotoNumber) {
+        return;
+    }
+
+    warehousePhotoIndex = index;
+
+    warehousePhoto.src =
+        warehousePhotos[warehousePhotoIndex];
+
+    warehousePhotoNumber.textContent =
+        (warehousePhotoIndex + 1) + " / " + warehousePhotos.length;
+}
+
+
+/* =================================
+   MANUAL PREVIOUS / NEXT
+================================= */
+
+function changeWarehousePhoto(direction) {
+
+    warehousePhotoIndex += direction;
+
+    /* Go from last photo to first */
+    if (warehousePhotoIndex >= warehousePhotos.length) {
+        warehousePhotoIndex = 0;
+    }
+
+    /* Go from first photo to last */
+    if (warehousePhotoIndex < 0) {
+        warehousePhotoIndex = warehousePhotos.length - 1;
+    }
+
+    showWarehousePhoto(warehousePhotoIndex);
+
+    /* Restart automatic slideshow */
+    startWarehouseSlideshow();
+}
+
+
+/* =================================
+   AUTOMATIC SLIDESHOW
+================================= */
+
+function startWarehouseSlideshow() {
+
+    clearInterval(warehouseSlideshow);
+
+    warehouseSlideshow = setInterval(function () {
+
+        warehousePhotoIndex++;
 
         if (warehousePhotoIndex >= warehousePhotos.length) {
             warehousePhotoIndex = 0;
         }
 
-        if (warehousePhotoIndex < 0) {
-            warehousePhotoIndex = warehousePhotos.length - 1;
-        }
+        showWarehousePhoto(warehousePhotoIndex);
 
-        document.getElementById("warehousePhoto").src =
-            warehousePhotos[warehousePhotoIndex];
+    }, 4000);
+}
 
-        document.getElementById("warehousePhotoNumber").textContent =
-            warehousePhotoIndex + 1;
+
+/* =================================
+   START SLIDESHOW
+================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (document.getElementById("warehousePhoto")) {
+
+        showWarehousePhoto(0);
+
+        startWarehouseSlideshow();
+
     }
-    </script>
+});
+        <script src="script.js"></script>
 </body>
 </html>
