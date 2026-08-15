@@ -824,31 +824,159 @@ footer {
 
 }
 
-/* WAREHOUSE RENTAL IMAGE */
+/* =================================
+   WAREHOUSE RENTAL
+================================= */
 
-.warehouse-image {
+.warehouse-rental {
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+
+/* =================================
+   WAREHOUSE PHOTO SLIDER
+================================= */
+
+.warehouse-slider {
+    position: relative;
     width: 100%;
-    height: 220px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.warehouse-slider img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 18px;
+    display: block;
+}
+
+
+/* =================================
+   PREVIOUS / NEXT ARROWS
+================================= */
+
+.warehouse-prev,
+.warehouse-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    font-size: 24px;
+    line-height: 42px;
+
     cursor: pointer;
-    transition: transform 0.3s ease;
+
+    z-index: 2;
+
+    transition: background 0.3s ease;
 }
 
-.warehouse-rental > a:first-child:hover .warehouse-image {
-    transform: scale(1.02);
+.warehouse-prev {
+    left: 12px;
 }
 
-.warehouse-rental h3 {
+.warehouse-next {
+    right: 12px;
+}
+
+.warehouse-prev:hover,
+.warehouse-next:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+/* =================================
+   PHOTO NUMBER
+================================= */
+
+.warehouse-photo-count {
+    position: absolute;
+
+    bottom: 10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    padding: 5px 12px;
+
+    border-radius: 15px;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   PARTITION
+================================= */
+
+.warehouse-divider {
+    width: 90%;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    margin: 20px auto;
+}
+
+
+/* =================================
+   WAREHOUSE DETAILS
+================================= */
+
+.warehouse-details {
+    padding: 0 25px 25px;
+}
+
+.warehouse-details h3 {
     margin-bottom: 15px;
 }
 
-.warehouse-rental p {
+.warehouse-details p {
     margin-bottom: 10px;
+    line-height: 1.5;
 }
 
-.warehouse-rental a[href^="tel:"] {
+.warehouse-details a[href^="tel:"] {
     color: #ffd700;
     font-weight: bold;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .warehouse-slider {
+        height: 220px;
+    }
+
+    .warehouse-details {
+        padding: 0 18px 22px;
+    }
+
+    .warehouse-prev,
+    .warehouse-next {
+        width: 38px;
+        height: 38px;
+
+        font-size: 20px;
+        line-height: 38px;
+    }
+
 }
