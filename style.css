@@ -1297,12 +1297,23 @@ footer {
 
 
 
-
 /* =================================
    TEAM IMAGE SIZE
 ================================= */
 
 .team-section .card img {
-    height: 170px;
-    object-fit: cover;
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .team-section .card img {
+        height: 145px;
+    }
 }
