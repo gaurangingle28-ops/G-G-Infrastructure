@@ -781,8 +781,6 @@ section h2 {
     margin-bottom: 12px;
 
 }
-
-
 /* =================================
    CONTACT
 ================================= */
@@ -821,6 +819,45 @@ section h2 {
     color: #ffd700;
 
     margin-bottom: 8px;
+
+}
+
+
+/* =================================
+   CONTACT INTRODUCTION
+================================= */
+
+.contact-intro {
+
+    max-width: 850px;
+
+    margin: 0 auto 25px;
+
+    padding: 0 15px;
+
+    text-align: center;
+
+}
+
+
+.contact-intro h3 {
+
+    color: #ffd700;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.contact-intro p {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 6px auto;
 
 }
 
@@ -950,10 +987,7 @@ footer {
     font-size: 42px;
 
     cursor: pointer;
-
 }
-
-
 /* =================================
    TABLET
 ================================= */
